@@ -1,0 +1,76 @@
+{
+  "name": "@hyperse/deep-merge",
+  "version": "1.0.0",
+  "description": "A TypeScript library for performing deep merges of objects with advanced configuration options.",
+  "keywords": [
+    "deep-merge",
+    "typescript",
+    "plugin merge",
+    "merge options",
+    "hyperse"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hyperse-io/deep-merge.git"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "bin/",
+    "dist/",
+    "index.js",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p ./tsconfig.build.json",
+    "lint": "eslint .",
+    "lint-fix": "yarn lint --fix",
+    "test": "run-s test-unit",
+    "test-unit": "vitest run",
+    "test-task": "vitest run",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit",
+    "lint-staged-files": "lint-staged --allow-empty",
+    "changeset": "changeset",
+    "release": "yarn build && changeset publish",
+    "cz": "cz",
+    "prepare": "husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@hyperse/eslint-config-hyperse": "^1.4.5",
+    "@types/node": "^24.0.10",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.30.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "yarn@4.9.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

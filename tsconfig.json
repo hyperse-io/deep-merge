@@ -1,0 +1,16 @@
+{
+  "extends": "@hyperse/eslint-config-hyperse/tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "moduleResolution": "nodenext",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "noEmit": false,
+    "paths": {
+      "@hyperse/deep-merge": ["./src/index.js"]
+    },
+    "types": ["vitest/globals", "node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["**/node_modules", "**/.*/", "dist", "build"]
+}
