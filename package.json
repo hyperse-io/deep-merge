@@ -1,6 +1,6 @@
 {
   "name": "@hyperse/deep-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A TypeScript library for performing deep merges of objects with advanced configuration options.",
   "keywords": [
     "deep-merge",
