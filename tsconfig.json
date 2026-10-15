@@ -4,7 +4,6 @@
     "rootDir": ".",
     "moduleResolution": "nodenext",
     "outDir": "dist",
-    "baseUrl": ".",
     "noEmit": false,
     "paths": {
       "@hyperse/deep-merge": ["./src/index.js"]
